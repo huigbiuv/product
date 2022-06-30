@@ -24,20 +24,3 @@ def load_data():
 
 data = load_data()
 
-st.sidebar.subheader("Show random tweet")
-random_tweet = st.sidebar.radio('Sentiment type', ('positive','negative','neutral'))
-st.sidebar.markdown(data.query('airline_sentiment == @random_tweet')[["text"]].sample(n=1).iat[0,0])
-
-st.sidebar.markdown("### Number of tweets by sentiment type")
-select = st.sidebar.selectbox('Vizualization type', ['Histogram', 'Pie Chart'], key='1')
-sentiment_count = data['airline_sentiment'].value_counts()
-sentiment_count = pd.DataFrame({'Sentiment' :sentiment_count.index, 'Tweets' :sentiment_count.values})
-
-if not st.sidebar.checkbox('Hide', True):
-    st.markdown("### Number of tweets by Sentiment")
-    if select == "Histogram":
-        fig = px.bar(sentiment_count, x='Sentiment', y='Tweets', color = 'Tweets', height= 500)
-        st.plotly_chart(fig)
-    else:
-        fig = px.pie(sentiment_count, values='Tweets', names='Sentiment')
-        st.plotly_chart(fig)
