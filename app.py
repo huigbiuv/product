@@ -1,10 +1,9 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
-#import plotly.express as px
+import plotly.express as px
 #from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
-import plotly.figure_factory as ff
 
 
 st.title("Inventory product analysis")
