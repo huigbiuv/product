@@ -29,4 +29,4 @@ select = st.sidebar.selectbox('Select a product',df['Title'])
 #get the state selected in the selectbox
 state_data = df[df['Title'] == select]
 #select_status = st.sidebar.radio("product status", ('Confirmed','Active', 'Recovered', 'Deceased'))
-st.bar_chart(center_info_data[‘Title’])
+st.bar_chart(center_info_data['Title'])
