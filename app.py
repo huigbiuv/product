@@ -23,3 +23,11 @@ def load_data():
 
 data = load_data()
 
+st.sidebar.checkbox("Show Analysis by product", True, key=1)
+select = st.sidebar.selectbox('Select a product',df['Title'])
+
+#get the state selected in the selectbox
+state_data = df[df['Title'] == select]
+select_status = st.sidebar.radio("product status", ('Confirmed',
+'Active', 'Recovered', 'Deceased'))
+
