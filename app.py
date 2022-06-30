@@ -24,9 +24,9 @@ def load_data():
 data = load_data()
 
 st.sidebar.checkbox("Show Analysis by product", True, key=1)
-select = st.sidebar.selectbox('Select a product',df['Title'])
+#select = st.sidebar.selectbox('Select a product',df['Title'])
 
 #get the state selected in the selectbox
-state_data = df[df['Title'] == select]
+#state_data = df[df['Title'] == select]
 #select_status = st.sidebar.radio("product status", ('Confirmed','Active', 'Recovered', 'Deceased'))
 st.bar_chart(center_info_data['Title'])
