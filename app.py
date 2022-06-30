@@ -1,17 +1,10 @@
 import pandas as pd
 import numpy as np
-'''
-num = int(input())
-if num%2 == 0:
-    print("It's an Even number!")
-else:
-    print("It's an Odd number!")
 
-'''
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.express as px
+#import plotly.express as px
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 
