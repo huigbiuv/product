@@ -29,4 +29,7 @@ st.sidebar.checkbox("Show Analysis by product", True, key=1)
 #get the state selected in the selectbox
 #state_data = df[df['Title'] == select]
 #select_status = st.sidebar.radio("product status", ('Confirmed','Active', 'Recovered', 'Deceased'))
-st.bar_chart(center_info_data['Title'])
+df = pd.DataFrame(data[:200], columns = ['Inventory Quantity','Title','Sale '])
+df.hist()
+plt.show()
+st.pyplot()
