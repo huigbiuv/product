@@ -19,7 +19,7 @@ DATA_URL = ("https://docs.google.com/spreadsheets/d/e/2PACX-1vRffwlmhiARpcl03gaG
 @st.cache(persist=True)
 def load_data():
     data = pd.read_csv(DATA_URL)
-    data['tweet_created'] = pd.to_datetime(data['tweet_created'])
+    data['Variant Updated At'] = pd.to_datetime(data['Variant Updated At'])
     return data
 
 data = load_data()
