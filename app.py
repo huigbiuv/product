@@ -3,10 +3,10 @@ import numpy as np
 import streamlit as st
 import plotly.express as px
 #from wordcloud import WordCloud, STOPWORDS
-#import matplotlib.pyplot as plt
-import matplotlib
-matplotlib.use('Agg')
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
+#import matplotlib
+#matplotlib.use('Agg')
+#from matplotlib import pyplot as plt
 
 
 st.title("Inventory product analysis")
